@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>JS Exam</title>
+    <link rel="stylesheet" href="css/all.min.css" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <div class="loading d-flex justify-content-center align-items-center">
+      <div class="spinner">
+        <div class="double-bounce1 text-white"></div>
+        <div class="double-bounce2 text-white"></div>
+      </div>
+    </div>
+    <button id="buttonUp" class="btn bg-danger text-white p-2 rounded-circle">
+      <i class="fa fa-circle-arrow-up"></i>
+    </button>
+
+    <aside class="position-fixed d-flex h-100">
+      <section class="nav d-flex align-content-between py-2">
+        <ul class="nav d-flex flex-column">
+          <li class="nav-item">
+            <a
+              class="nav-link text-white active"
+              data-nav="now_playing"
+              aria-current="page"
+              href="#"
+              >Now Playing</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" data-nav="popular" href="#"
+              >Popular</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" data-nav="top_rated" href="#"
+              >Top Rated</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" data-nav="trending" href="#"
+              >Ternding</a
+            >
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-white" data-nav="upcoming" href="#"
+              >Up coming</a
+            >
+          </li>
+        
+          
+          <li class="nav-item">
+            <a class="nav-link text-white"  id="contactus" href="#contact"
+              >Contact Us</a
+            >
+          </li>
+        </ul>
+        <div class="socialIcon ps-3">
+          <a class="" href=""
+            ><i class="fa-brands fa-facebook-f text-white"></i
+          ></a>
+          <a class="ms-2" href=""
+            ><i class="fa-brands fa-twitter text-white"></i
+          ></a>
+          <a class="ms-2" href=""
+            ><i class="fa-solid fa-globe text-white"></i
+          ></a>
+          <p class="text-white-50">
+            <small>Copyright Â© 2019 All Rights Reserved.</small>
+          </p>
+        </div>
+      </section>
+      <section
+        class="strip bg-white d-flex justify-content-between align-items-center flex-column py-2"
+      >
+        <div class="boxlogo text-center">
+          <img class="img-fluid w-50" src="logo.png" alt="" />
+        </div>
+        <div class="closeBox">
+          <i class="fa fa-align-justify"></i>
+        </div>
+       
+        <div class="d-flex align-items-center flex-column">
+          <div class="location">
+            <a class="ms-2" href=""
+              ><i class="fa-solid fa-globe text-black"></i
+            ></a>
+          </div>
+          <div class="share">
+            <a href=""><i class="fa-solid fa-share-nodes text-black"></i></a>
+          </div>
+        </div>
+      </section>
+    </aside>
+    <section class="">
+      <div class="container container w-75">
+      <div class="row py-2">
+        <div class="col-md-6">
+          <input
+            id="word"
+            class="form-control mb-5 bg-transparent border-0 rounded-0 border-bottom"
+            placeholder="get movies by word..."
+          />
+        </div>
+        <div class="col-md-6">
+          <input
+            class="form-control bg-transparent border-0 rounded-0 border-bottom"
+            id="allMovies"
+            placeholder="search..."
+          />
+        </div>
+      </div>
+    </div>
+      <div class="container w-75  ">
+        <div class="row movieRow gy-4">
+         
+        </div>
+      </div>
+      <div class="container my-1 py-2">
+        <div class="row">
+       
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="contact" class="contact container w-75 mx-auto">
+      <h2 class="text-white">Contact Us</h2>
+      <div class="row">
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="name"
+              placeholder="Enter Your name"
+            />
+            <div class="alert alert-danger " id="namealert" role="alert">
+              Your name is not valid must more than 3 char
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="email"
+              placeholder="Enter Your Email"
+            />
+            <div class="alert alert-danger " id="emailalert" role="alert">
+              Your Email is not valid
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="phone"
+              placeholder="Enter  Phone"
+            />
+            <div class="alert alert-danger " id="phoneAlert" role="alert">
+              Your phone is not valid
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="age"
+              placeholder="Enter Your age"
+            />
+            <div class="alert alert-danger" id="ageAlert" role="alert">
+              Your age is not valid 
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              type="password"
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="password"
+              placeholder="Enter  password"
+            />
+            <div
+              class="alert alert-danger "
+              id="passwordAlert"
+              role="alert"
+            >
+              Your password is not valid entre valid password *Minimum eight characters, at least one letter and one number:*
+            </div>
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="form-group">
+            <input
+              class="form-control bg-transparent rounded-0 border-0 border-bottom"
+              id="rePassword"
+              placeholder="Enter rePassword"
+            />
+            <div
+              class="alert alert-danger d-none"
+              id="rePasswordAlert"
+              role="alert"
+            >
+              password is not match
+            </div>
+          </div>
+        </div>
+
+        <div class="col-md-6 pt-2">
+          <button id="submit" class=" btn-outline-danger rounded bg-transparent "> submit</button>
+        </div>
+      </div>
+    </section>
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>

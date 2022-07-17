@@ -1,0 +1,130 @@
+body {
+  background-color: #000000da;
+  overflow: hidden;
+}
+#buttonUp {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 454;
+  display: none;
+}
+.loading {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 999;
+  background-color: #333;
+}
+
+/* spinner */
+.spinner {
+  width: 40px;
+  height: 40px;
+
+  position: relative;
+  margin: 100px auto;
+}
+
+.double-bounce1,
+.double-bounce2 {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background-color: rgb(241, 236, 236);
+  opacity: 0.6;
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  -webkit-animation: sk-bounce 2s infinite ease-in-out;
+  animation: sk-bounce 2s infinite ease-in-out;
+}
+
+.double-bounce2 {
+  -webkit-animation-delay: -1s;
+  animation-delay: -1s;
+}
+
+@-webkit-keyframes sk-bounce {
+  0%,
+  100% {
+    -webkit-transform: scale(0);
+  }
+  50% {
+    -webkit-transform: scale(1);
+  }
+}
+
+@keyframes sk-bounce {
+  0%,
+  100% {
+    transform: scale(0);
+    -webkit-transform: scale(0);
+  }
+  50% {
+    transform: scale(1);
+    -webkit-transform: scale(1);
+  }
+}
+
+/* end spinner */
+
+aside {
+  width: 200px;
+  left: -150px;
+  position: fixed;
+  z-index: 566;
+}
+.show .strip {
+  width: 50px;
+  background-color: white;
+}
+.nav {
+  width: 150px;
+  background-color: #000000;
+}
+.nav-item a {
+  font-size: 12px;
+}
+a:hover {
+  color: #dc3545 !important;
+}
+input {
+  background-color: transparent !important;
+}
+
+.nav-item {
+  opacity: 0;
+  padding-top: 100px;
+}
+i {
+  cursor: pointer;
+}
+small {
+  font-size: 10px;
+}
+.movie {
+  position: relative;
+  overflow: hidden;
+}
+.layer {
+  font-size: 10px;
+  position: absolute;
+  left: 0;
+  top: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.878);
+  transition: all 1s;
+}
+.movie:hover .layer {
+  top: 0;
+}
+input {
+  color: white !important;
+}
+.alert {
+  display: none;
+}
